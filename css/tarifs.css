@@ -1,13 +1,12 @@
 
 @font-face {
   font-family: "Trickster";
-  src: url("../assets/font/Batuphat\ Script.otf") format("opentype");
+  src: url("../assets/font/Ampher.ttf") format("opentype");
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  /* margin-bottom: 2em; */
 
 }
 
