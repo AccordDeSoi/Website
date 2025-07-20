@@ -1,0 +1,53 @@
+/* -------------------------------------------------------------------------- */
+/*                                    MAIN                                    */
+/* -------------------------------------------------------------------------- */
+
+.block {
+    margin: 10px;
+    /* background-color: antiquewhite; */
+    /* border: solid black 1px;
+    border-radius: 10px;
+    cursor: pointer; */
+    box-shadow: 1px 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* ---------------------------------- SOINS --------------------------------- */
+
+#soins {
+    display: flex;
+}
+
+@media (max-width:700px) {
+
+    #soins {
+        display: block;
+    }
+
+}
+
+#soins .block {
+    padding: 10px;
+}
+
+#soins img {
+    height: auto;
+    max-width: 100%;
+    width: 100%;
+    max-height: 175px;
+    object-fit: contain;
+}
+
+#soins h3{
+    text-decoration: underline;
+
+}
+#soins h3,
+#soins p {
+    padding: 10px
+}
+
+/* -------------------------------- rdvtarif -------------------------------- */
+
+#rdvtarif{
+    padding:10px;
+}

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accord de soi</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/planning.css">
+    <link rel="icon" type="image/x-icon" href="../assets/images/zen-crazy-japan-style-zazen-android-zen-master-relax-941c1b26391a3a4d392286270875644f.png">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <details>
+                <summary id="menuButton">
+                    <span class="hamburger"></span>
+                </summary>
+                <section id="menuList">
+                    <button onclick="location.href='../index.html'">Accueil</button>
+                    <button onclick="location.href='./rdv.html'">Prendre Rendez-Vous</button>
+                    <button onclick="location.href='./seances.html'">Nos Séances</button>
+                    <button onclick="location.href='./tarifs.html'">Grille tarifaire</button>
+                    <button onclick="location.href='./contact.html'">Contact</button>
+                </section>
+            </details>
+        </nav>
+
+        <section id="homebutton">
+            <img src="../assets/images/c.png" onclick="location.href='../index.html'">
+        </section>
+    </header>
+
+    <main>
+
+        <section id="mainSection">
+            <section id="titre">
+                <div>
+                    <h1>Prise de Rendez-Vous</h1>
+                </div>
+                <div>
+                    <p>A l'issu de ce formulaire, vous aurez acces aux horaires disponibles.</p>
+                </div>
+            </section>
+            <section id="formulaire" class="block">
+
+                    <div class="calendar">
+                        <!-- En-tête -->
+                        <div></div>
+                        <div class="day-header">Lundi</div>
+                        <div class="day-header">Mardi</div>
+                        <div class="day-header">Mercredi</div>
+                        <div class="day-header">Jeudi</div>
+                        <div class="day-header">Vendredi</div>
+                        <div class="day-header">Samedi</div>
+                        <div class="day-header">Dimanche</div>
+
+                        <!-- Heures de rendez-vous -->
+                        <!-- Exemple avec 9h, 10h, 11h -->
+                        <div class="hour-label">9h</div>
+                        <div class="slot" onclick="bookSlot(this)">09:00</div>
+                        <div class="slot" onclick="bookSlot(this)">09:00</div>
+                        <div class="slot" onclick="bookSlot(this)">09:00</div>
+                        <div class="slot" onclick="bookSlot(this)">09:00</div>
+                        <div class="slot" onclick="bookSlot(this)">09:00</div>
+                        <div class="slot booked">Réservé</div>
+                        <div class="slot" onclick="bookSlot(this)">09:00</div>
+                        <div class="hour-label">9h</div>
+                        <div class="slot" onclick="bookSlot(this)">09:00</div>
+
+
+                        <div class="slot" onclick="bookSlot(this)">09:00</div>
+                        <div class="slot" onclick="bookSlot(this)">09:00</div>
+                        <div class="slot" onclick="bookSlot(this)">09:00</div>
+                        <div class="slot" onclick="bookSlot(this)">09:00</div>
+                        <div class="slot booked">Réservé</div>
+                        <div class="slot" onclick="bookSlot(this)">09:00</div>
+                        <div class="hour-label">9h</div>
+                        <div class="slot" onclick="bookSlot(this)">09:00</div>
+                        <div class="slot" onclick="bookSlot(this)">09:00</div>
+                        <div class="slot" onclick="bookSlot(this)">09:00</div>
+                        <div class="slot" onclick="bookSlot(this)">09:00</div>
+                        <div class="slot" onclick="bookSlot(this)">09:00</div>
+                        <div class="slot booked">Réservé</div>
+                        <div class="slot" onclick="bookSlot(this)">09:00</div>
+                        <div class="hour-label">9h</div>
+                        <div class="slot" onclick="bookSlot(this)">09:00</div>
+                        <div class="slot" onclick="bookSlot(this)">09:00</div>
+                        <div class="slot" onclick="bookSlot(this)">09:00</div>
+                        <div class="slot" onclick="bookSlot(this)">09:00</div>
+                        <div class="slot" onclick="bookSlot(this)">09:00</div>
+                        <div class="slot booked">Réservé</div>
+                        <div class="slot" onclick="bookSlot(this)">09:00</div>
+                        <div class="hour-label">9h</div>
+                        <div class="slot" onclick="bookSlot(this)">09:00</div>
+                        <div class="slot" onclick="bookSlot(this)">09:00</div>
+                        <div class="slot" onclick="bookSlot(this)">09:00</div>
+                        <div class="slot" onclick="bookSlot(this)">09:00</div>
+                        <div class="slot" onclick="bookSlot(this)">09:00</div>
+                        <div class="slot booked">Réservé</div>
+                        <div class="slot" onclick="bookSlot(this)">09:00</div>
+                        <div class="hour-label">9h</div>
+                        <div class="slot" onclick="bookSlot(this)">09:00</div>
+                        <div class="slot" onclick="bookSlot(this)">09:00</div>
+                        <div class="slot" onclick="bookSlot(this)">09:00</div>
+                        <div class="slot" onclick="bookSlot(this)">09:00</div>
+                        <div class="slot" onclick="bookSlot(this)">09:00</div>
+                        <div class="slot booked">Réservé</div>
+                        <div class="slot" onclick="bookSlot(this)">09:00</div>
+                        <div class="hour-label">9h</div>
+                        <div class="slot" onclick="bookSlot(this)">09:00</div>
+                        <div class="slot" onclick="bookSlot(this)">09:00</div>
+                        <div class="slot" onclick="bookSlot(this)">09:00</div>
+                        <div class="slot" onclick="bookSlot(this)">09:00</div>
+                        <div class="slot" onclick="bookSlot(this)">09:00</div>
+                        <div class="slot booked">Réservé</div>
+                        <div class="slot" onclick="bookSlot(this)">09:00</div>
+                        <div class="hour-label">9h</div>
+                        <div class="slot" onclick="bookSlot(this)">09:00</div>
+                        <div class="slot" onclick="bookSlot(this)">09:00</div>
+                        <div class="slot" onclick="bookSlot(this)">09:00</div>
+                        <div class="slot" onclick="bookSlot(this)">09:00</div>
+                        <div class="slot" onclick="bookSlot(this)">09:00</div>
+                        <div class="slot booked">Réservé</div>
+                        <div class="slot" onclick="bookSlot(this)">09:00</div>
+                        <div class="hour-label">9h</div>
+                        <div class="slot" onclick="bookSlot(this)">09:00</div>
+                        <div class="slot" onclick="bookSlot(this)">09:00</div>
+                        <div class="slot" onclick="bookSlot(this)">09:00</div>
+                        <div class="slot" onclick="bookSlot(this)">09:00</div>
+                        <div class="slot" onclick="bookSlot(this)">09:00</div>
+                        <div class="slot booked">Réservé</div>
+                        <div class="slot" onclick="bookSlot(this)">09:00</div>
+                        <div class="hour-label">9h</div>
+                        <div class="slot" onclick="bookSlot(this)">09:00</div>
+                        <div class="slot" onclick="bookSlot(this)">09:00</div>
+                        <div class="slot" onclick="bookSlot(this)">09:00</div>
+                        <div class="slot" onclick="bookSlot(this)">09:00</div>
+                        <div class="slot" onclick="bookSlot(this)">09:00</div>
+                        <div class="slot booked">Réservé</div>
+                        <div class="slot" onclick="bookSlot(this)">09:00</div>
+
+                        <div class="hour-label">10h</div>
+                        <div class="slot" onclick="bookSlot(this)">10:00</div>
+                        <div class="slot booked">Réservé</div>
+                        <div class="slot" onclick="bookSlot(this)">10:00</div>
+                        <div class="slot" onclick="bookSlot(this)">10:00</div>
+                        <div class="slot" onclick="bookSlot(this)">10:00</div>
+                        <div class="slot" onclick="bookSlot(this)">10:00</div>
+                        <div class="slot" onclick="bookSlot(this)">10:00</div>
+
+                        <div class="hour-label">11h</div>
+                        <div class="slot" onclick="bookSlot(this)">11:00</div>
+                        <div class="slot" onclick="bookSlot(this)">11:00</div>
+                        <div class="slot booked">Réservé</div>
+                        <div class="slot" onclick="bookSlot(this)">11:00</div>
+                        <div class="slot" onclick="bookSlot(this)">11:00</div>
+                        <div class="slot" onclick="bookSlot(this)">11:00</div>
+                        <div class="slot" onclick="bookSlot(this)">11:00</div>
+                    </div>
+                    <div>
+                        <button type="submit">Envoyer</button><br>
+                    </div>
+                </form>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <section id="L">
+            <h5>Nos Reseaux</h5>
+            <h5>Conditions générales d’utilisation</h5>
+        </section>
+        <section id="R">
+            <h5 onclick="location.href='./confidentiality.html'">Politique de confidentialité</h5>
+            <h5 onclick="location.href='./legal.html'">Mentions légales</h5>
+        </section>
+        </section>
+    </footer>
+
+    <script>
+        function bookSlot(element) {
+            if (element.classList.contains('booked')) {
+                alert("Ce créneau est déjà réservé.");
+                return;
+            }
+
+            const confirmBooking = confirm("Souhaitez-vous réserver ce créneau : " + element.textContent + " ?");
+            if (confirmBooking) {
+                element.textContent = "Réservé";
+                element.classList.add("booked");
+            }
+        }
+    </script>
+</body>
+
+</html>
