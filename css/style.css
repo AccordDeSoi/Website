@@ -1,6 +1,7 @@
 @font-face {
     font-family: "Trickster";
-    src: url("../assets/font/Batuphat\ Script.otf") format("opentype");
+    /* src: url("../assets/font/Batuphat\ Script.otf") format("opentype"); */
+    src: url("../assets/font/Ampher.ttf") format("opentype");
 }
 H1,
 H2,
