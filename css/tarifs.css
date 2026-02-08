@@ -28,7 +28,7 @@ th {
   margin-bottom: 0.5em;
 } */
 
-.seance{
+.seance, p{
   text-align: center;
   padding:5px;
   margin:40px;
