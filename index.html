@@ -151,15 +151,56 @@
         const overlay = document.getElementById("overlay");
         const zoomedImg = document.getElementById("zoomedImg");
 
-        zoomable.addEventListener("click", function () {
-            zoomedImg.src = this.src;
-            overlay.style.display = "block";
-        });
+        let zoomActive = false;
+        let clickHandler, overlayHandler;
 
-        overlay.addEventListener("click", function () {
-            overlay.style.display = "none";
-        });
+        function enableZoom() {
+            if (zoomActive) return; // déjà activé
+
+            // Création des fonctions pour pouvoir les enlever plus tard
+            clickHandler = function () {
+                zoomedImg.src = this.src;
+                overlay.style.display = "block";
+            };
+
+            overlayHandler = function () {
+                overlay.style.display = "none";
+            };
+
+            zoomable.addEventListener("click", clickHandler);
+            overlay.addEventListener("click", overlayHandler);
+
+            zoomActive = true;
+        }
+
+        function disableZoom() {
+            if (!zoomActive) return; // déjà désactivé
+
+            zoomable.removeEventListener("click", clickHandler);
+            overlay.removeEventListener("click", overlayHandler);
+
+            overlay.style.display = "none"; // cacher si ouvert
+
+            zoomActive = false;
+        }
+
+        function handleZoomBehavior() {
+            const width = window.innerWidth;
+            if (width < 700) {
+                enableZoom();
+            } else {
+                disableZoom();
+            }
+        }
+
+        /* Au chargement */
+        handleZoomBehavior();
+
+        /* Au redimensionnement */
+        window.addEventListener("resize", handleZoomBehavior);
     </script>
+
+
 
 
 </body>
