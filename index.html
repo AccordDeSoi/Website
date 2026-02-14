@@ -49,7 +49,8 @@
                         quotidien aussi j’ai décidé de m’orienter vers un accompagnement centré sur le bien-être
                         (massage sonore aux bols tibétains, massage intuitif, techniques énergétiques...). Ces pratiques
                         se complètent déjà à votre convenance et je continuerai également à me
-                        former à de nouvelles techniques.</p>
+                        former à de nouvelles techniques.
+                    </p>
                 </div>
             </section>
             <section id="soins">
@@ -101,12 +102,34 @@
             <section id="local" class="block">
                 <h2>Informations Utiles</h2>
 
-                <p>Je me situe à proximité de<b>la place Paul Doumer</b> à Bordeau. </p>
-                
-                <img src="./assets/images/pauldoumer.png">
+                <p>Je me situe à proximité de <b>la place Paul Doumer</b> à Bordeaux. </p>
+                <img src="./assets/images/pauldoumer.png" class="zoomable" alt="Carte">
+
+                <div id="overlay">
+                    <div id="zoomContainer">
+                        <img id="zoomedImg">
+                    </div>
+                </div>
+
+
+                <br>
 
                 <h4>Transports en commun : </h4>
-                <p>Tram C et E / Bus 5 et 15 :<br>Arrêt Paul Doumer </p>
+                <p>
+                    Arrêt : Paul Doumer<br><img src="./assets/images/tram1.png" height="30" width="30" /> Tram : <img
+                        src="./assets/images/C.svg" height="30" width="30" /> <img src="./assets/images/E.svg"
+                        height="30" width="30" /> <br> <img src="./assets/images/bus1.png" height="30" width="30" />
+                    Bus : <img src="./assets/images/5.svg" height="30" width="30" />
+                    <img src="./assets/images/15.svg" height="30" width="30" />
+                </p><br>
+
+                <h4>Me Contacter : </h4>
+                <p>Pour prendre rendez-vous, veillez me contacter au <strong><u>0607551277</u></strong> .</p>
+                <p>Laissez-moi un message vocal avec vos coordonnées et vos
+                    disponibilités
+                    ou envoyez-moi un sms. Je vous indiquerais mon adresse exacte lors de notre prise de contact.
+                </p>
+
             </section>
         </section>
 
@@ -122,6 +145,22 @@
             <h5 onclick="location.href='./templates/legal.html'">Mentions légales</h5>
         </section>
     </footer>
+
+    <script>
+        const zoomable = document.querySelector(".zoomable");
+        const overlay = document.getElementById("overlay");
+        const zoomedImg = document.getElementById("zoomedImg");
+
+        zoomable.addEventListener("click", function () {
+            zoomedImg.src = this.src;
+            overlay.style.display = "block";
+        });
+
+        overlay.addEventListener("click", function () {
+            overlay.style.display = "none";
+        });
+    </script>
+
 
 </body>
 
