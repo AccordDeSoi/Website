@@ -20,10 +20,8 @@
                 </summary>
                 <section id="menuList">
                     <button onclick="location.href='./index.html'">Accueil</button>
-                    <!-- <button onclick="location.href='./templates/rdv_maintenance.html'">Prendre Rendez-Vous</button> -->
                     <button onclick="location.href='./templates/seances.html'">Séances</button>
                     <button onclick="location.href='./templates/tarifs.html'">Tarifs</button>
-                    <!-- <button onclick="location.href='./templates/contact.html'">Contact</button> -->
                 </section>
             </details>
         </nav>
@@ -31,7 +29,6 @@
         <section id="homebutton">
             <img src="./assets/images/c.png" onclick="location.href='./index.html'">
         </section>
-
     </header>
 
     <main>
@@ -40,9 +37,11 @@
                 <div>
                     <img id="mainImg" src="./assets/images/pot.png">
                 </div>
+
                 <div>
                     <H1>Accord De Soi</H1>
                 </div>
+
                 <div>
                     <p>Depuis une vinghtaine d'années j'ai exercé mon activité principale auprès
                         de personnes en souffrance physique et ou psychique. Mes proches dépendants ont besoin de moi au
@@ -53,14 +52,17 @@
                     </p>
                 </div>
             </section>
+
             <section id="soins">
                 <section class="block" id="soin1">
                     <div>
-                        <img src="./assets/images/bol.jpg">
+                        <img src="./assets/images/Ganesh.jpg">
                     </div>
+
                     <div>
                         <h3>Massage sonore aux bols tibétains</h3>
                     </div>
+
                     <div>
                         <p>Le massage sonore s’applique à presque tous, a de nombreux bienfaits et des effets
                             secondaires quasi-insignifiants. En effet, les sons et les vibrations des bols modifient les
@@ -69,14 +71,16 @@
                             restauration de l’équilibre énergétique du corps...</p>
                     </div>
                 </section>
+
                 <section class="block" id="soin2">
                     <div>
-                        <!-- ----------------------------- A COMPLETER ----------------------------- -->
-                        <img src="./assets/images/">
+                        <img src="./assets/images/gong.jpg">
                     </div>
+
                     <div>
                         <h3>Massage intuitif</h3>
                     </div>
+
                     <div>
                         <p>En 2024 je me suis formée au massage tantrique qui permet se réconcilier avec son corps,
                             d’harmoniser son féminin et son masculin et de sacraliser la personne que l’on est,
@@ -85,24 +89,33 @@
                             dans son entièreté (y compris les zones érogènes)...</p>
                     </div>
                 </section>
+
                 <section class="block" id="soin3">
                     <div>
-                        <!-- ----------------------------- A COMPLETER ----------------------------- -->
                         <img src="./assets/images/">
                     </div>
+
                     <div>
                         <h3>En savoir plus</h3>
                     </div>
+
                     <div>
                         <p>Je peux également vous proposer d'autres types de séances comme des séances énergétiques, de
                             la cartomancie...</p>
                     </div>
                 </section>
             </section>
+
             <section id="local" class="block">
                 <h2>Informations Utiles</h2>
-
-                <p>Je me situe à proximité de <b>la place Paul Doumer</b> à Bordeaux. </p>
+                <h4>Me Contacter : </h4>
+                <p>Pour prendre rendez-vous, veillez me contacter au <strong><u>0607551277</u></strong> .</p><br>
+                <p>Laissez-moi un message vocal avec vos coordonnées et vos
+                    disponibilités
+                    ou envoyez-moi un sms. Je vous indiquerais mon adresse exacte lors de notre prise de contact.
+                </p><br>
+                <p>Je me situe à proximité de <b>la place Paul Doumer</b> à Bordeaux. </p><br>
+                <button id="mapbutton">Voir La Carte</button>
                 <img src="./assets/images/pauldoumer.png" class="zoomable" alt="Carte">
 
                 <div id="overlay">
@@ -110,10 +123,7 @@
                         <img id="zoomedImg">
                     </div>
                 </div>
-
-
                 <br>
-
                 <h4>Transports en commun : </h4>
                 <p>
                     Arrêt : Paul Doumer<br><img src="./assets/images/tram1.png" height="30" width="30" /> Tram : <img
@@ -122,17 +132,9 @@
                     Bus : <img src="./assets/images/5.svg" height="30" width="30" />
                     <img src="./assets/images/15.svg" height="30" width="30" />
                 </p><br>
-
-                <h4>Me Contacter : </h4>
-                <p>Pour prendre rendez-vous, veillez me contacter au <strong><u>0607551277</u></strong> .</p>
-                <p>Laissez-moi un message vocal avec vos coordonnées et vos
-                    disponibilités
-                    ou envoyez-moi un sms. Je vous indiquerais mon adresse exacte lors de notre prise de contact.
-                </p>
-
             </section>
-        </section>
 
+        </section>
     </main>
 
     <footer>
@@ -150,10 +152,21 @@
         const zoomable = document.querySelector(".zoomable");
         const overlay = document.getElementById("overlay");
         const zoomedImg = document.getElementById("zoomedImg");
+        const displaymap = document.getElementById("mapbutton");
+        let clickDisplay;
+        displaymap.addEventListener("click", mapDisplay);
+        function mapDisplay() {
+            // Vérifie le style réel de l'élément
+            const currentDisplay = window.getComputedStyle(zoomable).display;
 
+            if (currentDisplay === "none") {
+                zoomable.style.display = "block";
+            } else {
+                zoomable.style.display = "none";
+            }
+        }
         let zoomActive = false;
         let clickHandler, overlayHandler;
-
         function enableZoom() {
             if (zoomActive) return; // déjà activé
 
@@ -172,7 +185,6 @@
 
             zoomActive = true;
         }
-
         function disableZoom() {
             if (!zoomActive) return; // déjà désactivé
 
@@ -183,7 +195,6 @@
 
             zoomActive = false;
         }
-
         function handleZoomBehavior() {
             const width = window.innerWidth;
             if (width < 700) {
@@ -192,17 +203,9 @@
                 disableZoom();
             }
         }
-
-        /* Au chargement */
         handleZoomBehavior();
-
-        /* Au redimensionnement */
         window.addEventListener("resize", handleZoomBehavior);
     </script>
-
-
-
-
 </body>
 
 </html>

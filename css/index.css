@@ -55,18 +55,31 @@
 /* ------------------------------ INFOS UTILES ------------------------------ */
 
 #local,
-#local p {
+#local p,
+#local button {
     font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#local button {
+    font-size: large;
+    width: 130px;
+    height: 30px;
+    cursor: pointer;
+    border: solid black 1px;
+    border-radius: 10px;
+    box-shadow: 1px 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 /* ----------------------------------- MAP ---------------------------------- */
 
-.zoomable{
+.zoomable {
     width: 80%;
-    display: block;
+    display: none;
     margin: auto;
     cursor: auto;
+    /* visibility: hidden; */
 }
+
 @media (max-width:700px) {
 
     .zoomable {
