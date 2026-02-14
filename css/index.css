@@ -77,14 +77,12 @@
     display: none;
     margin: auto;
     cursor: auto;
-    /* visibility: hidden; */
 }
 
 @media (max-width:700px) {
 
     .zoomable {
         width: 90%;
-        display: block;
         margin: auto;
         cursor: pointer;
     }
