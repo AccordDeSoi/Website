@@ -58,6 +58,11 @@
     padding: 10px
 }
 
+#soin3{
+    display:flex;
+    flex-direction: column;
+justify-content: space-evenly;}
+
 /* ------------------------------ INFOS UTILES ------------------------------ */
 
 #local,
