@@ -1,4 +1,3 @@
-
 .block {
   margin: 10px;
   /* border: solid black 1px;
@@ -9,6 +8,17 @@
 
 
 .block h2,
-.block p{
+.block p {
   margin: 10px;
+}
+
+html,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
