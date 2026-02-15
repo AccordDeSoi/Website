@@ -18,20 +18,26 @@
     display: flex;
 }
 
+#soins .block {
+    width: 33%;
+    padding: 10px;
+}
+
 @media (max-width:700px) {
 
     #soins {
         display: block;
     }
 
+    #soins .block {
+        width: auto;
+        padding: 10px;
+    }
+
     #map {
         width: 90%;
     }
 
-}
-
-#soins .block {
-    padding: 10px;
 }
 
 #soins img {

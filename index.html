@@ -74,7 +74,7 @@
 
                 <section class="block" id="soin2">
                     <div>
-                        <img src="./assets/images/gong.jpg">
+                        <img src="./assets/images/gong1.jpg">
                     </div>
 
                     <div>
@@ -92,7 +92,7 @@
 
                 <section class="block" id="soin3">
                     <div>
-                        <img src="./assets/images/">
+                        <img id="soin3img">
                     </div>
 
                     <div>
@@ -112,9 +112,8 @@
                 <p>Pour prendre rendez-vous, veillez me contacter au <strong><u>0607551277</u></strong> .</p><br>
                 <p>Laissez-moi un message vocal avec vos coordonnées et vos
                     disponibilités
-                    ou envoyez-moi un sms. Je vous indiquerais mon adresse exacte lors de notre prise de contact.
+                    ou envoyez-moi un sms.<br> Je me situe à proximité de <b>la place Paul Doumer</b> à Bordeaux.<br>Je vous indiquerais mon adresse exacte lors de notre prise de contact.
                 </p><br>
-                <p>Je me situe à proximité de <b>la place Paul Doumer</b> à Bordeaux. </p><br>
                 <button id="mapbutton">Voir La Carte</button>
                 <img src="./assets/images/pauldoumer.png" class="zoomable" alt="Carte">
 
@@ -125,13 +124,16 @@
                 </div>
                 <br>
                 <h4>Transports en commun : </h4>
-                <p>
-                    Arrêt : Paul Doumer<br><img src="./assets/images/tram1.png" height="30" width="30" /> Tram : <img
-                        src="./assets/images/C.svg" height="30" width="30" /> <img src="./assets/images/E.svg"
-                        height="30" width="30" /> <br> <img src="./assets/images/bus1.png" height="30" width="30" />
+                <p>Arrêt : Paul Doumer<br>
+                    <img src="./assets/images/tram1.png" height="30" width="30" />
+                    Tram : <img src="./assets/images/C.svg" height="30" width="30" />
+                    <img src="./assets/images/E.svg" height="30" width="30" /> <br>
+
+                    <img src="./assets/images/bus1.png" height="30" width="30" />
                     Bus : <img src="./assets/images/5.svg" height="30" width="30" />
                     <img src="./assets/images/15.svg" height="30" width="30" />
-                </p><br>
+                </p>
+                <br>
             </section>
 
         </section>
@@ -153,6 +155,8 @@
         const overlay = document.getElementById("overlay");
         const zoomedImg = document.getElementById("zoomedImg");
         const displaymap = document.getElementById("mapbutton");
+        const img3 = document.getElementById("soin3img");
+
         let clickDisplay;
         displaymap.addEventListener("click", mapDisplay);
         function mapDisplay() {
@@ -198,8 +202,10 @@
         function handleZoomBehavior() {
             const width = window.innerWidth;
             if (width < 700) {
+                img3.src = "./assets/images/autre.jpg";
                 enableZoom();
             } else {
+                img3.src = "./assets/images/autre.jpg";
                 disableZoom();
             }
         }
